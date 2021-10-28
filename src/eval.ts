@@ -67,7 +67,7 @@ const exec = (delta: Delta, q: Q, tape: Tape): Tape => {
 
   if (result.isNothing()) return tape;
   const [_, [_q, _s, _d]] = result.value;
-  return exec(delta, _q, move(_d, tape));
+  return exec(delta, _q, move(_d, [_LList, _s, _RList]));
 
 };
 
